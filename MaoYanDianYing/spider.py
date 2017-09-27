@@ -3,7 +3,7 @@ import json
 from requests.exceptions import RequestException
 import re
 from multiprocessing import Pool
-from pyquery import PyQuery as pq
+
 
 def get_one_page(url):
     response = requests.get(url)
@@ -45,7 +45,7 @@ def main(offset):
 
 if __name__ == '__main__':
     # for i in range(10):
-    #     main(i*0)
+    #     main(i*10)
     pool = Pool()
-    pool.map(main, [i*0 for i in range(10)])
+    pool.map(main, [i*10 for i in range(10)])
 
